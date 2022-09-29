@@ -1,0 +1,11 @@
+<article class="pkm_grid_card">
+    <h3 class="pkm_grid_card_title">{{ pokemonCard?.name | uppercase }}</h3>
+    <img src="{{pokemonCard?.sprites?.front_default }}" alt="{{ pokemonCard?.name }}" />
+    <span>{{ pokemonCard | formatType }}</span>
+    <button
+        type="button"
+        class="pkm_grid_card_edbtn"
+    >
+        Edit
+    </button>
+</article>
