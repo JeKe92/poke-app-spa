@@ -10,6 +10,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokeGridComponent } from './components/pokemon/poke-grid/poke-grid.component';
 import { PokeCardComponent } from './components/pokemon/poke-card/poke-card.component';
 import { FormatTypePipe } from './pipes/format-type.pipe';
+import { CamelcasePipe } from './pipes/camelcase.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormatTypePipe } from './pipes/format-type.pipe';
     PokemonComponent,
     PokeGridComponent,
     PokeCardComponent,
-    FormatTypePipe
+    FormatTypePipe,
+    CamelcasePipe
   ],
   imports: [
     BrowserModule,

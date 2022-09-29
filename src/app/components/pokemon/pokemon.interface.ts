@@ -11,6 +11,7 @@ export interface IPokemon {
 }
 
 export interface IPokemonCard {
+    id: string,
     name: string,
     sprites: any,
     types: any[]

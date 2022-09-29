@@ -1,4 +1,29 @@
+@font-face 
+    font-family: Flexo-Regular
+    src: url('assets/fonts/Flexo-Regular.ttf')
+
+$bgcolor: #FFF
+$transparent: rgba(255, 255, 255, 0)
+
+$color-1: #FFF
+$color-2: #F2F2F2
+$color-2-1: transparentize($color-2, .3)
+$color-3: #e1e1e1
+$color-3-1: transparentize($color-3, .3)
+
+$size: 3em
+$big-size: $size*2
+$min: $size*.5
+$max: $size*.6
+
+html
+    height: 100%
+  
 body
+    background: radial-gradient(circle, $color-2 $min/2, $transparent $min/2, $transparent $min, $color-3-1 $min, $color-3-1 $max, $transparent $max) 0 0, radial-gradient(circle, $color-3 $min/2, $transparent $min/2, $transparent $min, $color-2-1 $min, $color-2-1 $max, $transparent $max) $size $size, radial-gradient(circle, $color-2-1 $min/4, $transparent $min/4) $size 0, radial-gradient(circle, $color-3-1 $min/5, $transparent $min/5) 0 $size
+    background-size:  $big-size $big-size
+    background-color: $bgcolor
+    background-repeat: repeat
     box-sizing: border-box
     margin: 0
     font-family: "Flexo-Regular",arial,sans-serif

@@ -1,25 +1,28 @@
 .pkm_grid_card
-    border: 1px solid #e2e2e2
-    display: flex
-    flex-direction: column
-    margin-bottom: 20%
-    margin-right: 20px
+    border: 2px solid #e2e2e2
+    border-radius: 10px
+    background-color: #FFF 
+    margin-bottom: 10px
+    margin-right: 10px
     width: 200px
     padding: 15px
-    position: relative
 
-.pkm_grid_card_title 
-    text-align: center
+.pkm_grid_card_link
+    display: flex
+    flex-direction: column
+    color: black
+    text-decoration: none
 
-.pkm_grid_card_edbtn 
-    background: #e3350d
-    border-radius: 25px
-    color: white
-    padding: 5px 30px
-    position: absolute
-    bottom: 10px
-    right: 10px
+    .pkm_grid_card_img
+        width: 125px
+        height: 125px
+
+    .pkm_grid_card_number
+        color: #a6a6a6
+        font-size: 12px
+        font-weight: bold
     
-    &:hover
-        background: black
-        cursor: pointer
+    .pkm_grid_card_title
+        margin: 10px 0 5px
+        color: #484848
+

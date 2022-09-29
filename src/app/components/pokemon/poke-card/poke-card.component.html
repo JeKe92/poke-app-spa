@@ -1,11 +1,10 @@
 <article class="pkm_grid_card">
-    <h3 class="pkm_grid_card_title">{{ pokemonCard?.name | uppercase }}</h3>
-    <img src="{{pokemonCard?.sprites?.front_default }}" alt="{{ pokemonCard?.name }}" />
-    <span>{{ pokemonCard | formatType }}</span>
-    <button
-        type="button"
-        class="pkm_grid_card_edbtn"
-    >
-        Edit
-    </button>
+    <a class="pkm_grid_card_link" href="#">
+        <figure>
+            <img class="pkm_grid_card_img" src="{{pokemonCard?.sprites?.other?.dream_world?.front_default }}" alt="{{ pokemonCard?.name }}"/>
+        </figure>
+        <span class="pkm_grid_card_number">N° {{ pokemonCard?.id }}</span>
+        <h3 class="pkm_grid_card_title">{{ pokemonCard?.name | camelcase }}</h3>
+        <span class="pkm_grid_card_format">{{ pokemonCard | formatType }}</span>
+    </a>
 </article>
