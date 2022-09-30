@@ -25,4 +25,5 @@ export interface IPokemonType {
 export interface IPokemonTypeType {
     name: string,
     url: string,
+    color?: string,
 }

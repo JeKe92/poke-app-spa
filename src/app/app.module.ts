@@ -13,6 +13,7 @@ import { FormatTypePipe } from './pipes/format-type.pipe';
 import { CamelcasePipe } from './pipes/camelcase.pipe';
 import { ThreeDigitPipe } from './pipes/three-digit.pipe';
 import { PokePillComponent } from './components/pokemon/poke-pill/poke-pill.component';
+import { ColorTypeDirective } from './directives/color-type.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PokePillComponent } from './components/pokemon/poke-pill/poke-pill.comp
     FormatTypePipe,
     CamelcasePipe,
     ThreeDigitPipe,
-    PokePillComponent
+    PokePillComponent,
+    ColorTypeDirective
   ],
   imports: [
     BrowserModule,

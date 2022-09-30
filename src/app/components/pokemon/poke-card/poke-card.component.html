@@ -1,8 +1,12 @@
 <article class="pkm_grid_card">
     <a class="pkm_grid_card_link" href="#">
-        <figure class="pkm_grid_card_fig">
-            <img class="pkm_grid_card_img" src="{{pokemonCard?.sprites?.other?.dream_world?.front_default }}" alt="{{ pokemonCard?.name }}"/>
-        </figure>
+        <picture class="pkm_grid_card_fig">
+            <img 
+                class="pkm_grid_card_img"
+                src="{{pokemonCard?.sprites?.other?.['official-artwork']?.front_default }}"
+                srcset="{{pokemonCard?.sprites?.other?.dream_world?.front_default }}"
+                alt="{{ pokemonCard?.name }}"/>
+        </picture>
         <span class="pkm_grid_card_number">N° {{ pokemonCard?.id | threeDigit }}</span>
         <h3 class="pkm_grid_card_title">{{ pokemonCard?.name | camelcase }}</h3>
         <app-poke-pill 

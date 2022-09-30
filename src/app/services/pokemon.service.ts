@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
-import { IPokemonCard, IPokemonsResponse } from '../components/pokemon/pokemon.interface';
+import { IPokemonCard, IPokemonsResponse, IPokemonTypeType } from '../components/pokemon/pokemon.interface';
 
 @Injectable({
   providedIn: 'root'
