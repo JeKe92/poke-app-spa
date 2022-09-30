@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { IPokemon, IPokemonsResponse } from './pokemon.interface';
 
@@ -9,29 +9,30 @@ import { IPokemon, IPokemonsResponse } from './pokemon.interface';
 })
 export class PokemonComponent implements OnInit {
 
-  pokemons: IPokemon[];
-  nextPage: string;
-  previousPage: string;
+  pokemons: IPokemon[] = [];
+  nextPage: string = '';
+  isScrollLoad: boolean = false;
 
-  constructor( private pkmnService: PokemonService) {
-    this.pokemons = [];
-    this.nextPage = '';
-    this.previousPage = '';
-   }
+  constructor( private pkmnService: PokemonService) {}
 
   ngOnInit(): void {
-    this.initValues();
+    this.initValues(false);
   }
 
-  async initValues() {
-    const {results, next, previous} = await this.getPokemonsPage();
-    this.pokemons = results;
+  private async initValues(isNextPage: boolean) {
+    const { results, next } = await this.getPokemonsPage(isNextPage);
+    this.pokemons = [...this.pokemons, ...results];
     this.nextPage = next ?? '';
-    this.previousPage = previous ?? '';
   }
 
-  async getPokemonsPage(): Promise<IPokemonsResponse> {
-    return await this.pkmnService.getPokemons();
+  async getPokemonsPage(isNextPage: boolean): Promise<IPokemonsResponse> {
+    if(!isNextPage) {
+      return await this.pkmnService.getPokemons();
+    }
+    return await this.pkmnService.getPokemons(this.nextPage);
   }
 
+  loadMorePokemon() {
+    this.initValues(true);
+  }
 }

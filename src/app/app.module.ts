@@ -11,6 +11,8 @@ import { PokeGridComponent } from './components/pokemon/poke-grid/poke-grid.comp
 import { PokeCardComponent } from './components/pokemon/poke-card/poke-card.component';
 import { FormatTypePipe } from './pipes/format-type.pipe';
 import { CamelcasePipe } from './pipes/camelcase.pipe';
+import { ThreeDigitPipe } from './pipes/three-digit.pipe';
+import { PokePillComponent } from './components/pokemon/poke-pill/poke-pill.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CamelcasePipe } from './pipes/camelcase.pipe';
     PokeGridComponent,
     PokeCardComponent,
     FormatTypePipe,
-    CamelcasePipe
+    CamelcasePipe,
+    ThreeDigitPipe,
+    PokePillComponent
   ],
   imports: [
     BrowserModule,

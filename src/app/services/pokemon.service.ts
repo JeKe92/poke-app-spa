@@ -9,15 +9,15 @@ import { IPokemonCard, IPokemonsResponse } from '../components/pokemon/pokemon.i
 export class PokemonService {
   private url: string;
   constructor(private http: HttpClient) {
-    this.url = "https://pokeapi.co/api/v2/pokemon/";
+    this.url = "https://pokeapi.co/api/v2/";
   }
 
-  getPokemon(url?: string): Promise<IPokemonCard> {
-    return this.fetchApi(url ?? this.url);
+  getPokemon(url: string): Promise<IPokemonCard> {
+    return this.fetchApi(url ?? this.url + 'pokemon/');
   }
 
   getPokemons(url?: string): Promise<IPokemonsResponse> {
-    return this.fetchApi(url ?? this.url);
+    return this.fetchApi(url ?? this.url + 'pokemon/');
   }
 
   private async fetchApi(url: string): Promise<any> {

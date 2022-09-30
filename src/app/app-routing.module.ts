@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 
 const routes: Routes = [
-  {path: 'pokemon', component: PokemonComponent}
+  {path: '', redirectTo: '/pokedex', pathMatch: 'full'},
+  {path: 'pokedex', component: PokemonComponent}
 ];
 
 @NgModule({

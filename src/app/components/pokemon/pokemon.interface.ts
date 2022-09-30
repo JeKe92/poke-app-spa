@@ -16,3 +16,13 @@ export interface IPokemonCard {
     sprites: any,
     types: any[]
 }
+
+export interface IPokemonType {
+    slot: string,
+    type: IPokemonTypeType,
+}
+
+export interface IPokemonTypeType {
+    name: string,
+    url: string,
+}

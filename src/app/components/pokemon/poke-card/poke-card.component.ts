@@ -22,7 +22,7 @@ export class PokeCardComponent implements OnInit {
     this.pokemonCard = await this.createPokemonCard();
   }
 
-  async createPokemonCard() {
-    return await this.pkmnService.getPokemon(this.pokemon?.url);
+  async createPokemonCard(): Promise<IPokemonCard | undefined> {
+    return this.pokemon && await this.pkmnService.getPokemon(this.pokemon.url);
   }
 }
